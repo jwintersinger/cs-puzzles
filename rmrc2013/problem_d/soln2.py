@@ -3,11 +3,11 @@ import math
 import sys
 
 def is_leaf(d, n):
-  return math.floor(math.log2(d)) == n
+  return math.floor(math.log(d, 2)) == n
 
 def leaves(d, n):
   # d_depth: starts at 0
-  d_depth = math.floor(math.log2(d))
+  d_depth = math.floor(math.log(d, 2))
   start = d       * 2**(n - d_depth)
   end   = (d + 1) * 2**(n - d_depth)
   return (start, end)

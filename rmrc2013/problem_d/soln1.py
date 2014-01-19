@@ -10,7 +10,7 @@ def parents(num):
 
 def children(p, n):
   # Depth: starts at 0
-  p_depth = math.floor(math.log2(p))
+  p_depth = math.floor(math.log(p, 2))
   start = p * 2**(n - p_depth)
   end   = (p + 1) * 2**(n - p_depth)
   return range(start, end)
